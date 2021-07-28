@@ -1,0 +1,16 @@
+<hr />
+<p>Aqui é a lista de links!</p>
+<p>Menu minimizado? {{ minimize }}</p>
+
+<!-- laço com os links recebidos -->
+<div *ngFor="let link of links">
+  <span *ngIf="link.icon" class="material-icons">{{ link.icon }}</span>
+
+  {{ link.text }}{{ link.isActive ? " - Ativo" : "" }}
+
+  <div *ngFor="let child of link.children">
+    {{ link.text }}
+  </div>
+</div>
+<!-- laço com os links recebidos end -->
+<hr />

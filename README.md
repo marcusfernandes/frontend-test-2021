@@ -1,27 +1,35 @@
-# FrontendTest
+## Começando
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+- faça um _fork_ do projeto
+- clone o projeto em sua máquina
+- execute `npm install -g @angular/cli`
+- dentro da pasta do projeto, execute `npm install`
+- execute `ng serve -o`
 
-## Development server
+O layout está disponível no _[Figma](https://www.figma.com/proto/40NueHzM24sBaPmtygFger/Teste-front-end?node-id=5%3A355&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=5%3A355)_.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Estrutura do projeto
 
-## Code scaffolding
+```text
+| src/
+| | styles.scss // arquivo de estilos global
+| | app/
+| | | components/
+| | | | menu-body/
+| | | | | ...
+| | | | menu-footer/
+| | | | | ...
+| | | | menu-header/
+| | | | | ...
+| | | app.component.html
+| | | app.component.scss // arquivo de estilos do app.component
+| | | app.component.ts
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Os estilos que forem criados no arquivo `styles.scss` têm efeito em todos os componentes e respeitam a forma "tradicional" com que o CSS funciona.
 
-## Build
+Os estilos colocados nos arquivos `.scss` dos componentes afetam apenas os elementos dentro do arquivo `.html` do componente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este é um mecanismo conhecido como _["View Encapsulation"](https://angular.io/guide/view-encapsulation)_.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Nos componentes `menu-*` há trechos prontos que indicam como laços - `*ngFor` - e condicionais - `*ngIf` - functionam no Angular. Mais coisas sobre a linguagem de _template_ podem ser encontradas na [documentação](https://angular.io/guide/built-in-directives).

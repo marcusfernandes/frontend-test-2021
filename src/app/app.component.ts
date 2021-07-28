@@ -1,10 +1,43 @@
-import { Component } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { MenuFooterButton, MenuLink, User } from './components';
 @Component({
   selector: 'ft-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'frontend-test';
+  menuFooterButtons: MenuFooterButton[] = [];
+  menuLinks: MenuLink[] = [];
+  menuMinimized = false;
+  user: User | undefined;
+
+  constructor(private httpClient: HttpClient) {}
+
+  ngOnInit() {
+    this.httpClient.get('assets/mock/menu.json').subscribe((data) => {
+      this.menuLinks = this.handleMenuLinks(data);
+      this.user = this.handleUser(data);
+      this.menuFooterButtons = this.handleMenuFooterButtons(data);
+    });
+  }
+
+  handleMenuToggle() {
+    this.menuMinimized = !this.menuMinimized;
+  }
+
+  private handleMenuLinks(data: any): MenuLink[] {
+    data.menu.links[0].isActive = true;
+    return data.menu.links;
+  }
+
+  private handleUser(data: any): User {
+    return data.user;
+  }
+
+  private handleMenuFooterButtons(data: any): MenuFooterButton[] {
+    return data.menu.buttons;
+  }
 }

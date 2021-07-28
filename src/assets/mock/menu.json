@@ -1,0 +1,232 @@
+{
+  "menu": {
+    "buttons": [
+      {
+        "icon": "mail_outline",
+        "title": "Mensagens",
+        "url": "javascript:void(0)"
+      },
+      {
+        "icon": "notifications_none",
+        "title": "Lembretes",
+        "url": "javascript:void(0)"
+      },
+      {
+        "icon": "import_export",
+        "title": "Transações",
+        "url": "javascript:void(0)"
+      },
+      {
+        "icon": "help_outline",
+        "title": "Ajuda",
+        "url": "javascript:void(0)"
+      }
+    ],
+    "links": [
+      {
+        "icon": "dashboard",
+        "id": 1,
+        "isEnabled": true,
+        "isVisible": true,
+        "parentId": null,
+        "text": "Página inicial"
+      },
+      {
+        "isEnabled": true,
+        "icon": "check",
+        "id": 2,
+        "parentId": null,
+        "text": "Listas concluídas",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": "watch_later",
+        "id": 3,
+        "parentId": null,
+        "text": "Calendários",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": "warning",
+        "id": 4,
+        "parentId": null,
+        "text": "Notificações",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": "assignment",
+        "id": 5,
+        "parentId": null,
+        "text": "Relatórios",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": "settings",
+        "id": 6,
+        "parentId": null,
+        "text": "Configurações",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 7,
+        "parentId": 5,
+        "text": "Linhas",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 8,
+        "parentId": 5,
+        "text": "Barras",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 9,
+        "parentId": 5,
+        "text": "Pizza",
+        "isVisible": true
+      },
+      {
+        "isEnabled": false,
+        "icon": null,
+        "id": 10,
+        "parentId": 5,
+        "text": "Mapa de calor",
+        "isVisible": true
+      },
+      {
+        "isEnabled": false,
+        "icon": null,
+        "id": 11,
+        "parentId": 5,
+        "text": "Radar",
+        "isVisible": false
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 12,
+        "parentId": 6,
+        "text": "Aviões",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 13,
+        "parentId": 6,
+        "text": "Bicicletas",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 14,
+        "parentId": 6,
+        "text": "Caminhões",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 15,
+        "parentId": 6,
+        "text": "Drones",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 16,
+        "parentId": 6,
+        "text": "Ecranoplanos",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 17,
+        "parentId": 6,
+        "text": "Fábricas",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 18,
+        "parentId": 6,
+        "text": "Galpões",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 19,
+        "parentId": 6,
+        "text": "Heliportos",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 20,
+        "parentId": 6,
+        "text": "Iglus",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 21,
+        "parentId": 6,
+        "text": "Jangadas",
+        "isVisible": true
+      },
+      {
+        "isEnabled": false,
+        "icon": null,
+        "id": 22,
+        "parentId": 6,
+        "text": "Lhamas",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 23,
+        "parentId": 6,
+        "text": "Motocicletas",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 24,
+        "parentId": 6,
+        "text": "Naves",
+        "isVisible": true
+      },
+      {
+        "isEnabled": true,
+        "icon": null,
+        "id": 25,
+        "parentId": 6,
+        "text": "Ônibus",
+        "isVisible": true
+      }
+    ]
+  },
+  "user": {
+    "name": "Teste 123",
+    "role": "Administrador"
+  }
+}
