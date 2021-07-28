@@ -33,3 +33,17 @@ Os estilos colocados nos arquivos `.scss` dos componentes afetam apenas os eleme
 Este é um mecanismo conhecido como _["View Encapsulation"](https://angular.io/guide/view-encapsulation)_.
 
 Nos componentes `menu-*` há trechos prontos que indicam como laços - `*ngFor` - e condicionais - `*ngIf` - functionam no Angular. Mais coisas sobre a linguagem de _template_ podem ser encontradas na [documentação](https://angular.io/guide/built-in-directives).
+
+## Tarefas:
+
+- Implementar o html e o sass necessários para construir o layout do "Menu", proposto no protótipo do Figma.
+- Implementar o método _handleMenuLinks_, do componente `app.component.ts`, para tratar o vetor de links recebidos do mock.
+
+## Requisitos e explanações
+
+- O resultado visual deve estar de acordo com o proposto.
+- Os links possuem regras para serem ou não exibidos
+  - `isEnabled === false` - indica que o link não está disponível no plano atual do usuário. Neste caso deve ser exibido com o "cadeado" e aspecto de desabilitado
+  - `isVisible === false` - indica que o link não deve ser exibido.
+  - `parentId !== null` - indica que o link é filho de um grupo de links
+- Os links virão do _mock_ como um vetor _flat_. O método _handleMenuLinks_ tem a reponsabilidade de gerar o aninhamento dos links filhos.
