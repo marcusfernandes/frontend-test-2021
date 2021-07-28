@@ -46,4 +46,4 @@ Nos componentes `menu-*` há trechos prontos que indicam como laços - `*ngFor` 
   - `isEnabled === false` - indica que o link não está disponível no plano atual do usuário. Neste caso deve ser exibido com o "cadeado" e aspecto de desabilitado
   - `isVisible === false` - indica que o link não deve ser exibido.
   - `parentId !== null` - indica que o link é filho de um grupo de links
-- Os links virão do _mock_ como um vetor _flat_. O método _handleMenuLinks_ tem a reponsabilidade de gerar o aninhamento dos links filhos.
+- Os links virão do _mock_ como um vetor _flat_. O método _handleMenuLinks_ tem a responsabilidade de gerar o aninhamento dos links filhos.
