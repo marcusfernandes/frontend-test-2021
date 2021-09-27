@@ -1,7 +1,24 @@
-<hr />
-<p>Aqui é o topo do menu!</p>
-<p>Menu minimizado? {{ minimize }}</p>
-<span class="material-icons" (click)="handleClick()">menu</span>
-{{ user?.name }}
-{{ user?.role }}
-<hr />
+<div id="header" [class.application--menu-minimized]="minimize">
+  <div class="header__logo" >
+    <span class="material-icons menu" (click)="handleClick()">menu</span>
+    <img src="assets/public/image 4.svg" alt="ChecklistFacil">
+  </div>
+  <div class="header__profile">
+    <div class="header__title">
+      <div class="avatar">
+        MF
+      </div>
+      <div class="profile" *ngIf="!minimize">
+        <span>{{ user?.name }}</span>
+        <small>{{ user?.role }}</small>
+      </div>
+    </div>
+    <button>
+      <span class="material-icons">check</span>
+      <div *ngIf="!minimize">
+        Adicionar Lista
+      </div>
+    </button>
+  </div>
+</div>
+

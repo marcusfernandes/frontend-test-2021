@@ -7,15 +7,19 @@
       [minimize]="menuMinimized"
       (toggle)="handleMenuToggle()"
     ></ft-menu-header>
-    <ft-menu-body [links]="menuLinks" [minimize]="menuMinimized"></ft-menu-body>
-    <ft-menu-footer
+    <div id="menu_body_container">
+      <ft-menu-body [links]="menuLinks" [minimize]="menuMinimized"></ft-menu-body>
+    </div>
+    <div id="footer">
+      <ft-menu-footer
       [buttons]="menuFooterButtons"
       [minimize]="menuMinimized"
-    ></ft-menu-footer>
+      ></ft-menu-footer>
+    </div>
   </div>
   <!-- painel lateral end -->
   <!-- container principal -->
-  <div class="application__main">Aqui é o conteúdo principal!</div>
+  <div class="application__main"></div>
   <!-- container principal end -->
 </div>
 <!-- app-content end -->

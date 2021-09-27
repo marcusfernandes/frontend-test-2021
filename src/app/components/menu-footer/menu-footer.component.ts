@@ -20,6 +20,7 @@ export interface MenuFooterButton {
 export class MenuFooterComponent implements OnInit {
   @Input() minimize = false;
   @Input() buttons: MenuFooterButton[] = [];
+
   constructor() {}
 
   ngOnInit(): void {}

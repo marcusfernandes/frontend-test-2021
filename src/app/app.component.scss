@@ -1,0 +1,36 @@
+$asside_background:#EDF9F2;
+
+
+#menu_body_container{
+  overflow-y: auto;
+  margin-top: 30px;
+}
+
+#footer{
+  margin-top:auto;
+}
+
+.application{
+  display:grid;
+  grid-template-columns:264px 2fr;
+  transition: 0.5s;
+
+
+  &.application--menu-minimized{
+    grid-template-columns:66px 2fr;
+    transition: 0.5s;
+  }
+}
+
+.application__aside{
+  background-color:$asside_background;
+  display:flex;
+  flex-direction:column;
+  border-right: 2px solid rgba(0,0,0,0.1);
+  height:100vh;
+}
+
+.application__main{
+  background-image:url('/assets/public/tela.svg');
+}
+

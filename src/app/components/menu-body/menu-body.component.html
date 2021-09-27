@@ -1,16 +1,27 @@
-<hr />
-<p>Aqui é a lista de links!</p>
-<p>Menu minimizado? {{ minimize }}</p>
+<!-- <p>Menu minimizado? {{ minimize }}</p> -->
 
 <!-- laço com os links recebidos -->
-<div *ngFor="let link of links">
-  <span *ngIf="link.icon" class="material-icons">{{ link.icon }}</span>
+<div class="nav_item"  [class.application--menu-minimized]="minimize">
+  <a *ngFor="let link of links" [ngClass]="{'disabled': !link.isEnabled}">
 
-  {{ link.text }}{{ link.isActive ? " - Ativo" : "" }}
+      <div (click)="toggleSubmenu(link)" [ngClass]="{'active': link.isActive && isOpen == link.id}" class="parent" *ngIf="link.isVisible">
+        <span *ngIf="link.icon" class="material-icons">{{ link.icon }}</span>
 
-  <div *ngFor="let child of link.children">
-    {{ link.text }}
-  </div>
+        <div *ngIf="!minimize">
+          {{ link.text }}
+        </div>
+
+        <span *ngIf="!link.isEnabled" class="side-icon lock material-icons">lock</span>
+        <span *ngIf="link.children" class="side-icon material-icons">{{isOpen == link.id ? 'arrow_drop_up' : 'arrow_drop_down'}}</span>
+      </div>
+
+      <div [ngClass]="{'open': isOpen == link.id}" class="children">
+        <a [ngClass]="{'disabled': !child.isEnabled}" class="child" *ngFor="let child of link.children">
+          {{ child.text }}
+
+          <span *ngIf="!child.isEnabled" [ngClass]="{'disabled': !child.isEnabled}" class="side-icon material-icons">lock</span>
+        </a>
+      </div>
+
+  </a>
 </div>
-<!-- laço com os links recebidos end -->
-<hr />

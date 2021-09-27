@@ -16,6 +16,10 @@ export interface MenuLink {
   children: MenuLink[] | null;
 }
 
+type toggleMenu =  {
+  parentId: number
+}
+
 @Component({
   selector: 'ft-menu-body',
   templateUrl: './menu-body.component.html',
@@ -25,8 +29,25 @@ export interface MenuLink {
 export class MenuBodyComponent implements OnInit {
   @Input() minimize = false;
   @Input() links: MenuLink[] = [];
+  isOpen = -1;
+
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleSubmenu(link: MenuLink): void {
+    if(link.children){
+      if(this.isOpen === link.id){
+        this.isOpen = -1
+
+        link.isActive = false
+      }else{
+        this.isOpen = link.id
+
+        link.isActive = true
+      }
+    }
+  }
+
 }
