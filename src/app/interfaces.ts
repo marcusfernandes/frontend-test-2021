@@ -1,7 +1,6 @@
 import { MenuFooterButton, MenuLink, User } from "./components";
 
-
-export interface Menu {
+interface Menu {
   buttons:MenuFooterButton[],
   links:MenuLink[]
 }

@@ -1,16 +1,20 @@
+$back:rgba(0,0,0,0.6);
+$white:#F2F9F2;
+$gray:rgba(0,0,0,0.1);
+
 footer{
   & > div {
-    border-top: 2px solid rgba(0,0,0,0.1);
+    border-top: 2px solid $gray;
 
   cursor:pointer;
 
   span{
-    color:rgba(0,0,0,0.6);
+    color:$back;
   }
 
   display:flex;
   margin-top:auto;
-  background-color: #F2F9F2;
+  background-color:$white;
   align-items:center;
   justify-content:space-between;
   padding:20px;
